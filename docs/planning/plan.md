@@ -1,7 +1,7 @@
 # Plan
 This .md file is for detailing and documenting project outlines before actually starting work on the project itself.
 
----
+
 ### Initial Scope:
 - Supports 2 Devices
 - One Synchronized Folder
@@ -12,11 +12,10 @@ This .md file is for detailing and documenting project outlines before actually 
 - File Metadata
 - Local file index
 - Conflict detection
----
+
 ### Rough Architecture:
 ![architecture_rough.png](assets/architecture_rough.png)
 
----
 ### What I will learn / need to research:
 - Java NIO
 - File systems
@@ -28,7 +27,7 @@ This .md file is for detailing and documenting project outlines before actually 
 - Indexing
 - File synchronization
 - Conflict resolution
----
+
 ### Project Order / Roadmap
 #### 1. Project Setup
 - Initialize the Maven project
