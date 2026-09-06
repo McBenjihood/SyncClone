@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d60326-c2e5-43f6-81c9-25961be592a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/syncclone/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/syncclone/Maintest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/planning/notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/syncclone/filesystem/FileScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/syncclone/filesystem/FileScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/syncclone/Maintest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/syncclone/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +53,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "JUnit.MainTest.exampleTest.executor": "Run",
+    "JUnit.MainTest.executor": "Run",
+    "JUnit.MainTest.testReadDirectory.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHELLCHECK.PATH": "I do mind",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -65,15 +72,16 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "configurable.group.build"
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$/docs/planning/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.MainTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.syncclone.Main" />
       <module name="SyncClone" />
@@ -87,7 +95,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.exampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SyncClone" />
       <extension name="coverage">
         <pattern>
@@ -97,27 +105,15 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.syncclone" />
       <option name="MAIN_CLASS_NAME" value="com.syncclone.MainTest" />
-      <option name="METHOD_NAME" value="exampleTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="SyncClone" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="SyncClone" />
-      <option name="filePath" />
-      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MainTest.exampleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -152,6 +148,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Quick edit to .md files, removing separation lines because github somehow renders markdown different than intellij's .md preview and it looks ugly on github" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quick edit to .md files, removing separation lines because github somehow renders markdown different than intellij's .md preview and it looks ugly on github" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
