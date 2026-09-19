@@ -66,3 +66,5 @@ Thumbs.db
 
 #Testing
 test-files
+create_mock_data.sh
+mock_test_data
