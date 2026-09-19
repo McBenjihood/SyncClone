@@ -24,7 +24,6 @@ public class FileUtils {
         });
     }
 
-
     public static Stream<Path> readRecursively(Path path){
         try {
             return Files.walk(path);
