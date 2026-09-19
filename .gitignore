@@ -29,29 +29,8 @@ buildNumber.properties
 *.rar
 
 # IntelliJ IDEA
+.idea
 out/
-.idea_modules/
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-.idea/**/dbnavigator.xml
-.idea/**/gradle.xml
-.idea/**/libraries
-.idea/**/mongoSettings.xml
-.idea/**/copilot.data.migration.*.xml
-.idea/sonarlint/
-.idea/sonarlint.xml
-.idea/httpRequests
-.idea/caches/
-.idea/.cache/
 *.iws
 http-client.private.env.json
 

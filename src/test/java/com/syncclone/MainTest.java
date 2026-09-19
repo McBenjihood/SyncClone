@@ -1,6 +1,6 @@
 package com.syncclone;
 
-import com.syncclone.files.FileUtils;
+import com.syncclone.Files.FileUtils;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
