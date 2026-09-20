@@ -41,4 +41,9 @@ class MainTest {
         assertEquals(expected, result);
         FileUtils.deleteRecursively(baseDir);
     }
+
+    @Test
+    void testDBSetup(){
+
+    }
 }
