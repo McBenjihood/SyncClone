@@ -47,3 +47,8 @@ Thumbs.db
 test-files
 create_mock_data.sh
 mock_test_data
+
+# SQLite
+*.sqlite
+*.sqlite3
+*.db
