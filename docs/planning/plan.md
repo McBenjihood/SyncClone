@@ -39,7 +39,7 @@ This .md file is for detailing and documenting project outlines before actually 
 - Read a directory recursively
 - Find all files
 - Collect basic file information
-- Detect added, modified and deleted files
+- Detect added, modified and deleted files (Custom Record, associating Crud operation as Enum with IndexEntry)
 
 #### 3. File Hashing
 - Calculate SHA-256 hashes
@@ -47,7 +47,7 @@ This .md file is for detailing and documenting project outlines before actually 
 - Test hashing with different files
 
 #### 4. File Metadata
-- Create a `FileInfo` / `FileMetadata` class
+- Create a `FileInfo` / `IndexEntry` class
 - Store:
     - File path
     - File size

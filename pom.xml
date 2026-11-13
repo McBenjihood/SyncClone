@@ -28,19 +28,17 @@
             <version>3.45.1.0</version>
         </dependency>
 
+        <!--Google Guava-->
         <dependency>
-            <groupId>org.hibernate.orm</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>6.4.4.Final</version>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>33.8.0-jre</version>
         </dependency>
+
+        <!--Jackson-->
         <dependency>
-            <groupId>org.hibernate.orm</groupId>
-            <artifactId>hibernate-community-dialects</artifactId>
-            <version>6.4.4.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
+            <groupId>tools.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
             <version>3.3.0</version>
         </dependency>
     </dependencies>
