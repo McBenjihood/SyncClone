@@ -38,7 +38,7 @@
         <!--Jackson-->
         <dependency>
             <groupId>tools.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
+            <artifactId>jackson-databind</artifactId>
             <version>3.3.0</version>
         </dependency>
     </dependencies>
