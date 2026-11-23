@@ -1,6 +1,6 @@
 package com.syncclone;
 
-import com.syncclone.Files.FileUtils;
+import com.syncclone.files.FileTreeService;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -20,7 +20,7 @@ class MainTest {
         try {
             Files.createDirectory(baseDir);
         } catch (FileAlreadyExistsException e) {
-            FileUtils.deleteRecursively(baseDir);
+            FileTreeService.deleteRecursively(baseDir);
             Files.createDirectory(baseDir);
         }
 
@@ -35,11 +35,11 @@ class MainTest {
             }
         }
 
-        List<String> result = FileUtils.listDirectoryContentInStrings(baseDir);
+        List<String> result = FileTreeService.listDirectoryContentInStrings(baseDir);
 
         //Assert
         assertEquals(expected, result);
-        FileUtils.deleteRecursively(baseDir);
+        FileTreeService.deleteRecursively(baseDir);
     }
 
     @Test
