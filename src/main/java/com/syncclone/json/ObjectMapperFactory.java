@@ -1,4 +1,4 @@
-package com.syncclone.Json;
+package com.syncclone.json;
 
 import tools.jackson.core.JacksonException;
 import tools.jackson.core.JsonGenerator;

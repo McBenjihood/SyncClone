@@ -1,23 +1,24 @@
-package com.syncclone.Files;
+package com.syncclone.files;
 
 import com.google.common.hash.Hashing;
 import com.google.common.io.MoreFiles;
-import com.syncclone.Exceptions.DeletePathException;
-import com.syncclone.Exceptions.ReadDirectoryException;
-import com.syncclone.Records.IndexEntry;
+import com.syncclone.exceptions.DeletePathException;
+import com.syncclone.exceptions.ReadDirectoryException;
+import com.syncclone.records.IndexEntry;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
+import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
+import java.nio.file.NotDirectoryException;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class FileUtils {
+public class FileTreeService {
     public static void deleteRecursively(Path inputPath) {
         List<IndexEntry> filesList = readRecursively(inputPath);
         Stream<Path> outputStream = filesList.stream()
@@ -36,26 +37,15 @@ public class FileUtils {
     public static List<IndexEntry> readRecursively(Path inputPath){
         try (Stream<Path> stream = Files.walk(inputPath)){
             return stream
-                    .map(path -> fromPath(inputPath, path))
+                    .map(path -> indexEntryFromPath(inputPath, path))
                     .collect(Collectors.toList());
         }catch (IOException | UncheckedIOException e){
             throw new ReadDirectoryException("Exception while trying to recursively read Path content.", e);
         }
     }
 
-    public static List<String> listDirectoryContentInStrings(Path inputPath){
-        try (Stream<Path> stream = Files.list(inputPath)){
-            return stream
-                .map(Path::getFileName)
-                .map(Path::toString)
-                .sorted()
-                .collect(Collectors.toList());
-        } catch (IOException e) {
-            return List.of();
-        }
-    }
 
-    public static IndexEntry fromPath(Path syncPath, Path filePath) {
+    public static IndexEntry indexEntryFromPath(Path syncPath, Path filePath) {
         BasicFileAttributes attributes = null;
         try {
             attributes = Files.readAttributes(filePath, BasicFileAttributes.class);
@@ -74,6 +64,11 @@ public class FileUtils {
         );
     }
 
+    public static Path pathFromIndexEntry(IndexEntry indexEntry){
+        return Path.of(indexEntry.relativePath());
+    }
+
+
     private static String getSHA256(Path path) {
         if (Files.isRegularFile(path)){
             try {
@@ -83,6 +78,18 @@ public class FileUtils {
             }
         }
         return "";
+    }
+
+    public static List<String> listDirectoryContentInStrings(Path inputPath){
+        try (Stream<Path> stream = Files.list(inputPath)){
+            return stream
+                    .map(Path::getFileName)
+                    .map(Path::toString)
+                    .sorted()
+                    .collect(Collectors.toList());
+        } catch (IOException e) {
+            return List.of();
+        }
     }
 
 }

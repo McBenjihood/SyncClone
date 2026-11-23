@@ -1,4 +1,4 @@
-package com.syncclone.Records;
+package com.syncclone.records;
 
 public record IndexEntry(
         String relativePath,
